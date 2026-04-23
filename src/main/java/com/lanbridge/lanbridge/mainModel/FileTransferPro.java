@@ -10,14 +10,16 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Priority;
 import javafx.scene.layout.Region;
 import javafx.scene.layout.VBox;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
+import javafx.scene.image.*;
 
-
+import java.awt.*;
 import java.io.*;
 import java.net.InetAddress;
 import java.net.ServerSocket;
@@ -32,6 +34,10 @@ public class FileTransferPro extends Application {
 
     @Override
     public void start(Stage primaryStage) {
+        // codigo para la programacion del icono
+        Image icono = new Image(getClass().getResourceAsStream("/iconoTransLAN.png"));
+        primaryStage.getIcons().add(icono);
+
         // --- 1. PANEL LATERAL (SIDEBAR) ---
         VBox sidebar = new VBox(20);
         sidebar.setPrefWidth(200);
